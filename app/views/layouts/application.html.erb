@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Kishore</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+
+<script language="javascript" type="text/javascript">
+function clearText(field)
+{
+    if (field.defaultValue == field.value) field.value = '';
+    else if (field.value == '') field.value = field.defaultValue;
+}
+</script>
+</head>
+<body>
+<div id="templatemo_container_wrapper">
+<div id="templatemo_container">
+	<div id="templatemo_banner">
+  <div id="site_title">
+            <!-- logo -->
+            <%= render :partial => "homes/logo" %>
+      </div>
+        
+        <!-- menu -->
+        <%= render :partial => "homes/menu" %>
+    </div> <!-- end of banner -->
+    
+    <div id="templatemo_content">
+    	
+        <div id="side_column">
+        
+        	<!-- left partial -->
+            <%#= render %>
+            
+            <div class="side_column_box">
+            
+            	<h2><span></span>Newsletter</h2>
+                
+                <div class="side_column_box_content">
+
+                    <form action="#" method="get">
+                        <input type="text" value="Enter your email address..." name="q" size="10" class="inputfield" title="searchfield" onfocus="clearText(this)" onblur="clearText(this)" />
+                        
+                        <input type="submit" name="Search" value="Subscribe" alt="Search" class="submit_button" title="Search" />
+                    </form>
+                    
+                    <div class="cleaner"></div>
+                </div>
+                
+                <div class="bottom"></div>
+            </div>
+            
+        
+        </div> <!-- end of side column -->
+        
+        <div id="main_column">
+        
+            <div class="main_column_section">       
+            
+                <h2><span></span>Free CSS Templates</h2>
+                
+                <div class="main_column_section_content">
+                
+                      <%= yield %>
+                </div>
+              <div class="cleaner"></div>
+                <div class="bottom"></div>
+            </div>
+            
+            <div class="main_column_section">       
+            
+                <h2><span></span>Web Design Ideas</h2>
+                
+                <div class="main_column_section_content">
+                
+					<a href="#"><%= image_tag 'templatemo_image_02.jpg' %></a>               
+                    <p> Sed justo dolor, convallis at, <a href="#">vestibulum</a> vitae, elementum eu, pede. Morbi leo leo, tincidunt at, scelerisque a, dictum sit amet, nisi. Donec faucibus, erat quis vestibulum luctus, ante magna scelerisque nibh, non pulvinar elit risus sed est. <a href="#">Quisque</a> tincidunt commodo nisl.</p>
+                    <p>Morbi dui nulla, tristique viverra, commodo mollis, ultricies ut, augue. Quisque ut odio. Etiam <a href="#">fringilla</a> vestibulum nulla. Suspendisse venenatis.</p>
+                  <div class="cleaner_h20"></div> 
+                       
+                    <ul class="list_01">
+                        <li>Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. </li>
+                        <li>Nulla facilisi. Phasellus posuere justo id nunc <a href="#">bibendum</a> convallis.</li>
+                      <li>Aliquam sed nisi nulla, sit amet <a href="#">commodo</a> arcu.</li>
+                      <li>Sed sagittis, mauris vel fringilla varius, lacus diam <a href="#">faucibus</a> nisl, eu rutrum neque elit.</li>
+                  </ul>
+                    
+                    <div class="cleaner_h10"></div>
+                    <div class="button_01"><a href="#">View All</a></div>    
+                
+                </div>
+            <div class="bottom"></div>
+            </div>
+        
+        	
+            <div class="cleaner"></div>
+        </div> <!-- end of main column -->
+    
+    	<div class="cleaner"></div>
+    </div> <!-- end of content -->
+    
+    <div id="templatemo_footer">
+    
+    <div id="templatemo_footer_bar">
+    
+        <ul class="footer_menu">
+            <li><a href="#">Home</a></li>
+            <li><a href="http://www.templatemo.com" target="_parent">Templates</a></li>
+          <li><a href="#">Services</a></li>
+            <li><a href="#">Gallery</a></li>
+            <li><a href="#">About</a></li>
+            <li class="last_menu"><a href="#">Contact</a></li>
+        </ul>
+
+        Copyright © 2048 <a href="#">Your Company Name</a> | <a href="http://www.iwebsitetemplate.com" target="_parent">Website Templates</a> by <a href="http://www.templatemo.com" target="_parent">Free CSS Templates</a>
+        
+    </div>
+    
+    </div> <!-- end of footer -->
+
+</div> <!-- end of container -->
+</div> <!-- end of container wrapper -->
+<div align=center>This template  downloaded form <a href='http://all-free-download.com/free-website-templates/'>free website templates</a></div></body>
+</html>

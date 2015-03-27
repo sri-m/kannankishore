@@ -1,0 +1,35 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @customer.name %>
+</p>
+
+<p>
+  <strong>Email:</strong>
+  <%= @customer.email %>
+</p>
+
+<p>
+  <strong>Cell:</strong>
+  <%= @customer.cell %>
+</p>
+
+<p>
+  <strong>Address:</strong>
+  <%= @customer.address %>
+</p>
+
+<table width="50%" border="1">
+	<th>Order Name:</th><th>Order Price:</th><th>Order Quantity:</th>
+   <% @customer.orders.each do |cust_orders| %>
+   <tr>
+   		<td><%= cust_orders.order_name %></td>
+   		<td><%= cust_orders.order_price %></td>
+   		<td><%= cust_orders.order_qty %></td>
+   </tr>
+   <% end %>
+</table>
+
+<%= link_to 'Edit', edit_customer_path(@customer) %> |
+<%= link_to 'Back', customers_path %>

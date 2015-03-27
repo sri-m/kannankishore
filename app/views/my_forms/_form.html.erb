@@ -1,0 +1,15 @@
+<%= semantic_form_for @my_form do |f| %>
+  <%= f.inputs do %>
+    <%= f.input :name,      :input_html => { :size => 20 } %>
+    <%= f.input :email,      :input_html => { :size => 20 } %>
+    <%= f.input :cell,      :input_html => { :size => 20 } %>
+    <%= f.input :category, as: :select, :collection => Customer.find(1).orders.pluck(:order_name) %>
+    <%= f.input :gender, :as => :radio, :collection => [:Male, :Female], :label => "Sex" %>
+    <%= f.input :date %>
+    <%= f.input :address,       :input_html => { :class => 'autogrow', :rows => 10, :cols => 20, :maxlength => 1000  } %>
+  <% end %>
+new
+  <%= f.actions do %>
+    <%= f.action :submit, :as => :input %>
+  <% end %>
+<% end %>
